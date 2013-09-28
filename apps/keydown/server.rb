@@ -7,3 +7,6 @@ set :port => ENV["PORT"]
 get '/' do
   erb :decks
 end
+
+get '/refresh' do
+end
