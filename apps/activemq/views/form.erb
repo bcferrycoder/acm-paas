@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<script type="text/javascript">
+var current = 0;
+var previousSlide = "";
+
+function refresh() {
+  // ajax call to get current slide and render it
+    $.ajax({
+    url: "/current",
+    beforeSend: function ( xhr ) {
+      xhr.overrideMimeType("text/plain; charset=x-user-defined");
+    }
+  }).done(function ( data ) {
+    alert("data: " + data);
+     if( console && console.log ) {
+       console.log("Sample of data:", data.slice(0, 160));
+       showSlide(data);
+    }
+  });
+}
+
+function next() {
+  // ajax call to increment slide
+  $.ajax({
+    url: "/next",
+    beforeSend: function ( xhr ) {
+      xhr.overrideMimeType("text/plain; charset=x-user-defined");
+    }
+  }).done(function ( data ) {
+    if( console && console.log ) {
+      console.log("Sample of data:", data.slice(0, 160));
+    }
+  });
+}
+
+function previous() {
+  // ajax call to increment slide
+  $.ajax({
+    url: "/previous",
+    beforeSend: function ( xhr ) {
+      xhr.overrideMimeType("text/plain; charset=x-user-defined");
+    }
+  }).done(function ( data ) {
+    if( console && console.log ) {
+      console.log("Sample of data:", data.slice(0, 160));
+    }
+  });
+}
+
+
+function showSlide(url) {
+  if (url != previousSlide) {
+    document.getElementById("slideframe").src = url;
+    previousSlide = url;
+  }
+}
+
+
+//setInterval(refresh,300);
+
+//function showSlide() {
+//  var url = uri_prefix + slides[current];
+//  document.getElementById("slideframe").src = url;
+//}
+
+</script>
+
+
+<h3>Slide Presenter</h3>
+
+<p><a href="#" onclick="next();">next slide</a></p>
+<p><a href="#" onclick="previous();">previous slide</a></p>
+<p><a href="#" onclick="refresh();">refresh</a></p>
+
+<iframe id="slideframe" name="slideshow" width="1024" height="768"><p>SLIDESHOW</p></iframe>
+
+
+<form action="/form" method="post">  
+  <input type="text" name="message">  
+  <input type="submit">  
+</form>

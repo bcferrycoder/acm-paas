@@ -1,0 +1,7 @@
+name: draught
+mem: 128M
+framework: buildpack
+env:
+  BUILDPACK_URL: git://github.com/bcferrycoder/deletemesoon.git
+#  BUILDPACK_URL: ssh://git@github.com/bcferrycoder/draught.git
+#  BUILDPACK_URL: git://github.com/bcferrycoder/draught.git

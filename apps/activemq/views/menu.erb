@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+function setCurrent(uri) {
+  // ajax call to set current slide url on server
+    $.ajax({
+    url: "/setcurrent",
+    type: "post",
+    data: "s="+uri,
+    beforeSend: function ( xhr ) {
+      xhr.overrideMimeType("text/plain; charset=x-user-defined");
+    }
+  }).done(function ( data ) {
+     if( console && console.log ) {
+       console.log("Sample of data:", data.slice(0, 160));
+       showSlide(data);
+    }
+  });
+}
+
+</script>
+</head>
+
+<body>
+
+<img width="120"
+onclick="setCurrent('http://static.192.168.2.85.xip.io/slides/slide1.png');"
+src="http://static.192.168.2.85.xip.io/slides/slide1.png"><br />
+
+<img width="120"
+onclick="setCurrent('http://static.192.168.2.85.xip.io/slides/bigdemo.001.png');"
+src="http://static.192.168.2.85.xip.io/slides/bigdemo.001.png"><br>
+
+<img width="120"
+onclick="setCurrent('http://static.192.168.2.85.xip.io/slides/slide3.png');"
+src="http://static.192.168.2.85.xip.io/slides/slide3.png"><br>
+
+<img width="120"
+onclick="setCurrent('http://static.192.168.2.85.xip.io/slides/ni.001.png');"
+src="http://static.192.168.2.85.xip.io/slides/ni.001.png"><br>
+
+<img width="120"
+onclick="setCurrent('http://static.192.168.2.85.xip.io/slides/ni.002.png');"
+src="http://static.192.168.2.85.xip.io/slides/ni.002.png"><br>
+
+<img width="120"
+onclick="setCurrent('http://static.192.168.2.85.xip.io/slides/ni.003.png');"
+src="http://static.192.168.2.85.xip.io/slides/ni.003.png"><br>
+
+<img width="120"
+onclick="setCurrent('http://activestate.com/stackato/');"
+src="http://static.192.168.2.85.xip.io/slides/slide1.png"><br />
+
+<img width="120"
+onclick="setCurrent('http://timberviewcare.files.wordpress.com/2012/07/scio_ferris_wheel.jpg');"
+src="http://timberviewcare.files.wordpress.com/2012/07/scio_ferris_wheel.jpg"><br />
+
+
+<img width="120"
+onclick="setCurrent('http://www.youtube.com/watch%3fv=aG-9oi8YRC8');"
+src="http://timberviewcare.files.wordpress.com/2012/07/scio_ferris_wheel.jpg"><br />
+
+

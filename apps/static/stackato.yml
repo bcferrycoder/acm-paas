@@ -1,0 +1,7 @@
+name: static
+framework:
+    type: generic 
+mem: 32M
+instances: 1
+processes:
+    web: $STACKATO_UWSGI --check-static $HOME --static-index index.html

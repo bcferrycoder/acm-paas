@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>BCFerryCoder Blogs</title>
+    <meta name="description" content="">
+    <meta name="author" content="Name Lastname">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script
+src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link
+href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css"
+rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1"
+rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72"
+href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114"
+href="images/apple-touch-icon-114x114.png">
+  -->
+<link rel="stylesheet" href="styles/default.css">
+<link rel="stylesheet"
+      href="/assets/highlight.js-master/src/styles/zenburn.css">
+
+<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+  <style>
+
+     a:link.plainlink {color:black;}
+     a:visited.plainlink {color:black;}
+     a:hover.plainlink {color:#007040;}
+     a:active {color:#00ffff;}
+
+     .imagebutton {
+       pad-top: 100px;
+       margin-left: 18px;
+     }
+
+    .differentiator {
+      font-size: 15px;
+    }
+
+  </style>
+
+  </head>
+
+  <body>
+
+    <div style="margin-top:30px;" class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">BCFerryCoder</a>
+          <ul class="nav">
+      <li><a href="/topics/stackato/">Stackato/PaaS</a></li>
+      <li><a href="/topics/java/">Java</a></li>
+      <li><a href="/topics/tools/">Tools</a></li>
+      <li><a href="/topics/enterprise/">Enterprise Software</a></li>
+      <li><a href="/topics/untools/">Untools</a></li>
+      <li><a href="/topics/blog/">Blog</a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+<!--<li style="line-height:5px;"><img style="position:absolute;top:20px;padding-top:5px;margin-bottom:0px;padding-bottom:0px;" src="/assets/images/dingy.png" width="115"></li>-->
+<li style="line-height:5px;"><img style="position:absolute;top:4px;padding-top:5px;margin-bottom:0px;padding-bottom:0px;" src="/assets/images/bcferrycoder_nobg.png" width="185"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+<div class="container">
+  <div class="content">
+    <div style="width:104%;margin-left:-19px;margin-top:-21px;" class="box" style="background-color:black;color:white;">
+      <img width="110%" src="/assets/images/thinocean.png">
+    </div>
+
+
+    <div class="container">
+
+      <div class="content">
+        <div class="page-header">
+
+  <h1>Polyglot <small>On the Road with PaaS</small></h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+
+    <p>A <strong>polyglot</strong> defined as is <strong>one who is fluent in multiple languages.</strong> This is similar to how a multilinguist is &#8230; uh &#8230;fluent inmultiple languages. (OK, who invented two words for the same thing?)</p>
+
+<p>Well, it turns out polyglot applies not just to spoken languages, but to written languages as well, such as Clojure and Ruby.</p>
+
+<p>And thus in the software world, a polyglot is an application built on multiple languages. The term also applies to developer tools that can manipulate such apps.</p>
+
+<h3 id='why_add_complexity'>Why Add Complexity?</h3>
+
+<p>By definition adding multiple languages increases complexity. Syntax, tools, docs, thought processes, talent pools, libraries, meetups and trade-shows to attend, rss feeds to subscribe to, blogs to read, test strategies, &#8230; there are good reasons to go with a single language to unify the required knowledge and dramatically reduce complexity and overhead.</p>
+
+<p>Also staffing and building a coherent team can be simpler if all code and all engineers speak the same language.</p>
+
+<p>So why are polyglot apps rampant in enterprise software endeavors?</p>
+
+<p>One simple answer is, web apps are rendered in browsers, and browsers speak JavaScript. Until recently, the rest of the application stack was decidedly <em>not</em> JavaScript. So most web apps are polyglots from day one.</p>
+
+<p>But that&#8217;s a legacy reason resulting from the explosion in the use of the browser as a user interface container. There are more reasons to build an app stack from multiple languages.</p>
+
+<h2 id='go_poly_'>Go Poly !!!</h2>
+
+<p>The best reason to use multiple languages is captured by the simple maxim: <em>Use the Right Tool for the Job</em>. All languages are not created equal. Successful languages are successful for a reason, usually because of something they do well.</p>
+
+<p>Consider the following common tasks:</p>
+
+<ul>
+<li>
+<p>create a test suite, defining DSLs to orchestrate tests</p>
+</li>
+
+<li>
+<p>build a secure, transactional, high-volume backend that sits behind REST</p>
+</li>
+
+<li>
+<p>validate and respond to user input in a browser</p>
+</li>
+
+<li>
+<p>manipulate registers and hardware in a limited-memory device</p>
+</li>
+
+<li>
+<p>rapidly prototype a traditional MVC web app</p>
+</li>
+
+<li>
+<p>build a sophisticated UI-heavy workflow management system</p>
+</li>
+
+<li>
+<p>frequently perform long-running data-manipulating batch-jobs</p>
+</li>
+</ul>
+
+<p>The list of languages chosen for these tasks is as varied as the organizations that make such choices. Influencing factors include compatibilty with existing tools, customer requirements, legacy code, performance criteria, library availability, cost, support options, complexity, open source considerations, team experience and bias&#8230; the list goes on.</p>
+
+<p>One thing is clear: there is no &#8220;one language fits all&#8221;. So Polyglot apps are here, for the forseeable future anyway. But as mentioned above, adding languages introduces complexity, and complexity comes at a price.</p>
+
+<h2 id='paas_to_the_rescue'>PaaS to the Rescue</h2>
+
+<p>Managing versions, libraries, tools, deployment across multiple developers and multple teams (dev, QA, release team, IT) is difficult enough with one language in place. The overhead of using multiple languages can be severe, and often drives organizations to attempt (unsuccessfully) to unify their deployment stack.</p>
+
+<p>But with the advent of PaaS, a solution is at hand. Nowadays, instead of spending days/weeks and the efforts of multiple teams building up a stack that supports multiple languages, with PaaS a developer can spin up the same stack in minutes.</p>
+
+<p>In particular, Stackato - FILL - is fluent in a wide range of languages including Java, Python, Ruby, Tcl, Perl, JavaScript, Php, Clojure, Scala, &#8230; and the list is expanding.</p>
+
+<p>(Side note: Stackato&#8217;s support of 10 (and growing) languages elevates it to the status of true <strong>hyperpolyglot</strong>: membership in the hyperpolyglot club requires fluency in 6 languages.</p>
+
+<p>So if you have a hodge-podge app with components built with Ruby on Rails, Python/Django, Java/Play, Java Spring MVC, Clojure, Tcl, and Perl, you can fire up a Stackato instance in minutes and deploy everything with minimal effort, and with consistency across all deployments.</p>
+
+<h2 id='but_wait_theres_more'>But Wait There&#8217;s More</h2>
+
+<p>Powerful PaaS solutions support not only multiple languages, but also frameworks that go them them. Spring, Django, Play!, Node&#8230;, more) and bundled services (MySQL, RabbitMQ, Nginx, MongoDB, Redis).</p>
+
+<h2 id='the_future'>The Future</h2>
+
+<p>JavaScript has a major advantage over all other languages, in that it is the</p>
+
+<p>Note: JS has a major advantage over all other languages, in that it has come to be known as the language of the Internet.</p>
+
+<p>Stackato, with its support of is fluent in &#8220;x&#8221; languages, which makes it not just a polglot, but a full-fledged hyperpolyglot (minimum 6 languages to join that club).</p>
+
+<p>So in the world of the software developer, a tool (IDE, compiler, CMS, etc) that supports multiple languages is a polyglot.</p>
+
+<p>And therefore Stackato, with its out-of-the-box support of N languages is considered not just a polyglot, but a hyperpolyglot, since it speaks &#8220;six or more languages fluently.&#8221;</p>
+
+<p>Java/Python/Ruby/Tcl/Perl/JavaScript/Php/ for starters. But not just the languages, but also the best-of-breed state-of-the-art platforms, frameworks, libraries, containers, and tools that go with them.</p>
+
+<p>Plus it learns fast, so new language support is fast.</p>
+
+<p>Why Build a Polyglot Application?</p>
+
+<p>PaaS gives us the means, what&#8217;s the motive?</p>
+
+<p>The correct answer is: don&#8217;t. At least, prefer &#8220;omniglot&#8221; (homogenous) application stacks, other factors being equal. Polyglotism (can I call it polyglotamy?) adds complexity, and complexity is expensive.</p>
+
+<p><span>Sidebar: I&#8217;ve witnessed single enterprise applications built on as many as 12 separate language:</span></p>
+
+<p>example: Java, JavaScript, PHP, Ruby, sh, ddl, xml (in this context it was a language)</p>
+
+<p>Remember 400 line php app to rename two files&#8230; progress bars and everything</p>
+
+<p>Poliglotamy causes engineers are either diluted or they tend to become silo&#8217;d (antipattern #7).</p>
+
+<p>]</p>
+
+<p>But several factors outweigh the increased complexity costs.</p>
+
+<p>An application built with multiple languages is obviously more complex than one written with a single language. So, why do this?</p>
+
+<p>Tools: specific tools often require specific languages. This includes libraries, frameworks, etc.</p>
+
+<p>Expertise: Value your in-house expertise, and encourage, where it makes sense, internal development using their technologies of choice</p>
+
+<p>Performance Some tools/languages perform better, by design. If you need very high performance and scalability, consider</p>
+
+<p>Speed of development (mention DSLs):</p>
+
+<p>Language characteritics (type-saftey needed some places not other)</p>
+
+<p>A complex enterprise apps have lots of moving parts. Message systems, batch jobs, analytics tools, and countless additional services must work in harmony with each other and with the overall application purpose.</p>
+
+<p>And some tasks beg for specific tools or languages that are particularly adept at solving specific problems. In fact sometimes this is a requirement.</p>
+
+<p>For example, example you probably wouldn&#8217;t choose Python for high performant and tasks that require sophiticated thread managment, while at the same time you might avoid building a DSL in Java.</p>
+
+<p>Also in-house engineering expertise, which often comes in the form of deep knolwedge of particular technologies, is valuable and should be tapped.</p>
+
+<p>Say you have two experts Tap any knowledge you have of fluensy with performance testing with RSpec. This might mean building the test framework in Ruby.</p>
+
+<p>LEGACY POLYGLOTISM</p>
+
+<p>Note architecture MVC * 3 (REST layer MVC, PHP MVC, Browser MVC) - yuck !</p>
+
+<p>Mention all langauges in one unmentioned enterprise application.</p>
+
+<p>BUIDLING NEW POLYGLOT APPLICATIONS</p>
+
+<p>The reasons above notwithstanding, it&#8217;s generally better to build a complex system with fewer moving parts.</p>
+
+<h2 id='future_opa_node_etc_make_not_of_architecture'>Future: OPA, Node, etc. Make not of architecture</h2>
+
+<p>HYPERPOLYGLOT means 6 or more.</p>
+
+<p>The choice depends on existing infrastructure, customer requirements, compatibility with existing tools, cost of the solution, availabilty of libraries, developer team experience and biases.</p>
+
+<p>OK I&#8217;ll stop now. The point is, enterprise apps often have to do these and many other things. Rarely, if ever, is a single language able to fit the bill for everything that needs to be done.</p>
+
+<p>Other factors that influence choosing multiple languages are:</p>
+
+<p>In-house Talent: if you have an engineer</p>
+
+<p>This diversity usually promotes great creativevy.</p>
+
+<p>But the truth, in today&#8217;s software environments,</p>
+
+<p>It&#8217;s clear the polyglot apps with is, for the forseeable future anyway.</p>
+
+<p>with PaaS, the effort involved in deploying an application built on multiple languages is reduced almost to zero.</p>
+
+    <hr>
+    <hr>
+    
+  </div>
+
+      </div>
+
+
+      <footer>
+        <p>&copy; John Wetherill 2012 </p>
+<!--          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+          and <a href="https://github.com/isagalaev/highlight.js" target="_blank">Highlight.js</a>
+        </p>-->
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+
+

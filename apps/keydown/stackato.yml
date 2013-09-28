@@ -1,0 +1,5 @@
+name: keydown
+framework:
+  type: sinatra
+mem: 128M
+instances: 1

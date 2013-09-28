@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>BCFerryCoder Blogs</title>
+    <meta name="description" content="">
+    <meta name="author" content="Name Lastname">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script
+src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link
+href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css"
+rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1"
+rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72"
+href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114"
+href="images/apple-touch-icon-114x114.png">
+  -->
+<link rel="stylesheet" href="styles/default.css">
+<link rel="stylesheet"
+      href="/assets/highlight.js-master/src/styles/zenburn.css">
+
+<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+  <style>
+
+     a:link.plainlink {color:black;}
+     a:visited.plainlink {color:black;}
+     a:hover.plainlink {color:#007040;}
+     a:active {color:#00ffff;}
+
+     .imagebutton {
+       pad-top: 100px;
+       margin-left: 18px;
+     }
+
+    .differentiator {
+      font-size: 15px;
+    }
+
+  </style>
+
+  </head>
+
+  <body>
+
+    <div style="margin-top:30px;" class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">BCFerryCoder</a>
+          <ul class="nav">
+      <li><a href="/topics/stackato/">Stackato/PaaS</a></li>
+      <li><a href="/topics/java/">Java</a></li>
+      <li><a href="/topics/tools/">Tools</a></li>
+      <li><a href="/topics/enterprise/">Enterprise Software</a></li>
+      <li><a href="/topics/untools/">Untools</a></li>
+      <li><a href="/topics/blog/">Blog</a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+<!--<li style="line-height:5px;"><img style="position:absolute;top:20px;padding-top:5px;margin-bottom:0px;padding-bottom:0px;" src="/assets/images/dingy.png" width="115"></li>-->
+<li style="line-height:5px;"><img style="position:absolute;top:4px;padding-top:5px;margin-bottom:0px;padding-bottom:0px;" src="/assets/images/bcferrycoder_nobg.png" width="185"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+<div class="container">
+  <div class="content">
+    <div style="width:104%;margin-left:-19px;margin-top:-21px;" class="box" style="background-color:black;color:white;">
+      <img width="110%" src="/assets/images/thinocean.png">
+    </div>
+
+
+    <div class="container">
+
+      <div class="content">
+        <div class="page-header">
+
+  <h1>polyglot <small>On the Road with PaaS</small></h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+
+    <p>A <strong>polyglot</strong> is defined as is <strong>one who is fluent in multiple languages.</strong> This is similar to how a multilinguist is &#8230; uh &#8230;fluent in multiple languages. (OK, who invented two words for the same concept?)</p>
+
+<p>Well, it turns out polyglot applies not only to spoken languages, but to written languages as well, such as Clojure and Ruby.</p>
+
+<p>And thus in the software world, a polyglot is an application built on multiple languages. The term also applies to developer tools that can manipulate such apps.</p>
+
+<h4 id='why_add_complexity'>Why Add Complexity?</h4>
+
+<p>By definition adding languages increases complexity. Syntax, tools, docs, thought processes, talent pools, libraries, meetups and trade-shows to attend, rss feeds to subscribe to, blogs to read, test strategies, &#8230; there are good reasons to go with a single language to unify the required knowledge and dramatically reduce complexity and overhead.</p>
+
+<p>So given their additional complexity and cost, why are polyglot apps rampant in enterprise software endeavors?</p>
+
+<h4 id='go_poly_'>Go Poly !!!</h4>
+
+<p>The best reason to use multiple languages is captured by the simple maxim: <em>Use the Right Tool for the Job</em>. All languages are not created equal. Successful languages are successful for a reason, usually because of something they do well.</p>
+
+<p>Consider some typical enterprise tasks:</p>
+
+<ul>
+<li>
+<p>create a test suite, defining DSLs to orchestrate the tests</p>
+</li>
+
+<li>
+<p>build a secure, transactional, high-volume backend that sits behind REST</p>
+</li>
+
+<li>
+<p>validate and respond to user input in a browser</p>
+</li>
+
+<li>
+<p>manipulate registers and hardware in a limited-memory device</p>
+</li>
+
+<li>
+<p>rapidly prototype a traditional MVC web app</p>
+</li>
+
+<li>
+<p>build a sophisticated UI-heavy workflow management system</p>
+</li>
+
+<li>
+<p>frequently perform long-running data-manipulating batch-jobs</p>
+</li>
+</ul>
+
+<p>The list of languages chosen for these tasks is as varied as the organizations that make such choices. Influencing factors include compatibilty with existing tools, customer requirements, legacy code, performance criteria, library availability, cost, support options, complexity, open source considerations, team experience and bias&#8230; the list goes on.</p>
+
+<p>One thing is clear: there is no &#8220;one language fits all&#8221;. So polyglot apps are here, for the forseeable future anyway. But as mentioned above, adding languages introduces complexity which especially impacts the deployment phase and hits multiple teams (dev, QA, release, IT).</p>
+
+<h4 id='paas_to_the_rescue'>PaaS to the Rescue</h4>
+
+<p>With the advent of PaaS a solution is at hand. Instead of spending days/weeks and the efforts of multiple teams assembling a stack that supports multiple languages, with PaaS the same platform can be created in minutes.</p>
+
+<p>In particular, Active State&#8217;s Private PaaS offering Stackato is well versed in a wide array of languages including Ruby, Java, Python, Tcl, .NET, Perl, JavaScript/Node.js, PHP, Clojure, Erlang, Scala, &#8230; and the list is expanding.</p>
+
+<p>Side note: Stackato&#8217;s support of 10 (and growing) languages elevates it to the status of true <strong>hyperpolyglot</strong>, meaning fluent in 6 or more languages.</p>
+
+<p>And not only languages: Stackato also supports the frameworks that go them including Ruby on Rails, Spring, Django, Play!, backbone, and bundles common services such as MySQL, RabbitMQ, Nginx, MongoDB, Redis.</p>
+
+<p>So if you are constructing or maintaining app with components built with disparate languages, take a few minutes to fire up Stackato. You&#8217;ll save considerable effort/time assembling a such a platform yourself, and at the end of the day all teams will have an identical deployment enviroment.</p>
+
+    <hr>
+    <hr>
+    
+  </div>
+
+      </div>
+
+
+      <footer>
+        <p>&copy; John Wetherill 2012 </p>
+<!--          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+          and <a href="https://github.com/isagalaev/highlight.js" target="_blank">Highlight.js</a>
+        </p>-->
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+
+

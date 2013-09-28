@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>BCFerryCoder Blogs</title>
+    <meta name="description" content="">
+    <meta name="author" content="Name Lastname">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script
+src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link
+href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css"
+rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1"
+rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72"
+href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114"
+href="images/apple-touch-icon-114x114.png">
+  -->
+<link rel="stylesheet" href="styles/default.css">
+<link rel="stylesheet"
+      href="/assets/highlight.js-master/src/styles/zenburn.css">
+
+<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+  <style>
+
+     a:link.plainlink {color:black;}
+     a:visited.plainlink {color:black;}
+     a:hover.plainlink {color:#007040;}
+     a:active {color:#00ffff;}
+
+     .imagebutton {
+       pad-top: 100px;
+       margin-left: 18px;
+     }
+
+    .differentiator {
+      font-size: 15px;
+    }
+
+  </style>
+
+  </head>
+
+  <body>
+
+    <div style="margin-top:30px;" class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">BCFerryCoder</a>
+          <ul class="nav">
+      <li><a href="/topics/stackato/">Stackato/PaaS</a></li>
+      <li><a href="/topics/java/">Java</a></li>
+      <li><a href="/topics/tools/">Tools</a></li>
+      <li><a href="/topics/enterprise/">Enterprise Software</a></li>
+      <li><a href="/topics/untools/">Untools</a></li>
+      <li><a href="/topics/blog/">Blog</a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+<!--<li style="line-height:5px;"><img style="position:absolute;top:20px;padding-top:5px;margin-bottom:0px;padding-bottom:0px;" src="/assets/images/dingy.png" width="115"></li>-->
+<li style="line-height:5px;"><img style="position:absolute;top:4px;padding-top:5px;margin-bottom:0px;padding-bottom:0px;" src="/assets/images/bcferrycoder_nobg.png" width="185"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+<div class="container">
+  <div class="content">
+    <div style="width:104%;margin-left:-19px;margin-top:-21px;" class="box" style="background-color:black;color:white;">
+      <img width="110%" src="/assets/images/thinocean.png">
+    </div>
+
+
+    <div class="container">
+
+      <div class="content">
+        <div class="page-header">
+
+  <h1>Enterprise Disintegration Antipatterns <small>On the Road with PaaS</small></h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+
+    <p>.</p>
+
+<h3 id='study_failure'><strong>Study Failure</strong></h3>
+
+<p>Software fails, and the cost of failure extremely high. Fight failure successfully and you&#8217;ll save bigtime. But how does one fight failure? The answer is simple: <strong>Study it.</strong></p>
+
+<p>This sounds about as exciting as a <a class='plainlink' href='http://en.wikipedia.org/wiki/Six_sigma'>Six Sigma class</a>, but it turns out it&#8217;s actually quite fascinating. After a while, patterns emerge. These patterns represent bad choices that end up costing a fortune, and are best avoided.</p>
+
+<p>We all know that the real reason it&#8217;s fun to study failure is the overwhelming sense of relief that comes from knowing that some other poor sap had to go through this, and NOT ME!</p>
+
+<p>Anyway I&#8217;m calling these patterns <strong>Enterprise Disintegration Antipatterns</strong> since they affect corporations of all sizes, they have damaging (disintegrating) consequences, and therefore like all antipatterns, should be avoided.</p>
+<img src='/assets/images/collapsingbuilding.jpg' width='356' />
+<p><strong>Without a solid foundation the enterprise will disintegrate</strong></p>
+
+<pre><code>   An Enterprise Disintegration Antipattern is any repeated
+   behavior that tends towards failure of enterprise software or
+   enterprise software organizations.</code></pre>
+
+<p><strong>Ed note: it still sounds mind-numbinginly boring</strong> <strong>See SIDEBAR How much does this cost?</strong> <strong>See SIDEBAR What is an antipattern?</strong></p>
+
+<p>The good news is that with a solid foundation, many/most of these patterns can be avoided.</p>
+
+<p>This series follows a pattern itself, which is to:</p>
+
+<ol>
+<li>
+<p>Identify and describe a common antipattern</p>
+</li>
+
+<li>
+<p>Identify likely causes</p>
+</li>
+
+<li>
+<p>Describe how issue can be avoided using PaaS</p>
+</li>
+
+<li>
+<p>Summarize cost to implement (tco)</p>
+</li>
+
+<li>
+<p>Summary total value/gain</p>
+</li>
+</ol>
+
+<p>This blog series highlights that that tends towards a less desirable result. It turns out antipatterns are rampant in enterprise software development. Whether large or small, established or startup, failure, failure happens.</p>
+
+<p>If you&#8217;ve around a while you&#8217;ve almost certainly seen your share of failure. And if you</p>
+
+<p>Among the countless failures, big and small, that occur in corporations, big and small, are many</p>
+
+<p>Which is the subject of this talk: reocurrding patterns that often lead toward software failure.</p>
+
+<h2 id='study_failure'>Study Failure</h2>
+
+<p>s is true in with almost anything, close observation of failure yields re-occuring patterns.</p>
+
+<p>Enterprise Failure seems particularly suited to pattern extraction as you&#8217;ll see.</p>
+
+<p>For years, every time I experienced or observered failure at my current job, I would consider it</p>
+
+<p>For a long time, I assume that the failure observed was a (forgive the expression) singleton</p>
+
+<p>But, like anything else, exposure to something often unveils about patterns in the</p>
+
+<p>arethis is nothing new. It&#8217;s slightly disturbing to note that with even with Moore&#8217;s law, mind-numbing advances in technology, tools, computer languages, networks, methadologies, test frameworks, &#8230; that we generally still cannot reliably create a system that we can comfortably say &#8220;just works&#8221;.</p>
+
+<h2 id='step_1_define_your_sidebars'>Step 1: Define your sidebars</h2>
+
+<p>(Ed: It&#8217;s true: I know this old guy who used to work in a data center with all these ancient IBM 1403&#8230;, and he says that programming is WAY sloppier now than ever. Back then - they web</p>
+
+<p>software that fails more than</p>
+
+<p>with all our evolutions, software is continuing to fail. It seems not enough effort is spent fixing failure.</p>
+
+<p>everyone knows that. Effort spent reducing failure seems well worth it.</p>
+
+<p>a natural focus for any developer. The fastest way to avoid failing is by failing. But the best way to avoid failing is observing it when it occurs.</p>
+<hr />
+<p>many endeavors failA few tips for setting up more than one sidebar in a Wordpress theme. Multiple sidebars can be used for footers, internal page areas, etc.&#8221; category:</p>
+
+<p>Build the agile pack thusly:</p>
+
+<pre><code>stackato install agile-pack</code></pre>
+
+<p>You&#8217;ll want to replace it with something like this:</p>
+<hr /><hr />
+<p>The Idea</p>
+
+<p>Diluting The Idea</p>
+
+<p>(one huge lightbulb, dozens of infracstructure effort thingys</p>
+
+<h2 id='anvils'>(anvils)</h2>
+
+<p>AntiPattern One: Optimize early</p>
+
+<p>This is one of the most tantelizing, seductive, and &#8230; nefarious antipatterns. In fact avoiding it is one of the harder engineering problems. Well, hardest engineer problems anyway.</p>
+
+<p>Consider this O(n4): Problem: documents with words , find &#8230; who knows. but this should be easy. Scenerio:</p>
+
+<p>for .. for for for end</p>
+
+<p>You know - it&#8217;s SO tempting to spend a few minutes fixing this. But don&#8217;t.</p>
+
+<p>WHY: Five reasons:</p>
+
+<ol>
+<li>
+<p>it&#8217;s probably fast already</p>
+</li>
+
+<li>
+<p>it&#8217;s probably fast enough</p>
+</li>
+
+<li>
+<p>faster usually more complex (engineer time vs. cpu time)</p>
+</li>
+</ol>
+
+<p>3a. optimization often leads to obfuscation</p>
+
+<ol>
+<li>
+<p>requirements change</p>
+</li>
+
+<li>
+<p>your time can be MUCH better spent</p>
+</li>
+</ol>
+
+<p>Just Say No!</p>
+
+<p>This is really hard to do: it&#8217;s such a blast to take an method, algorithm, whole application, and Make It FFFaast.</p>
+
+<p>Many software engineerings thrive on this alone.</p>
+
+<p>But&#8230; resist Resitance Is Infutile.</p>
+
+<p>Instead of opgimizing: WRITE TESTS!</p>
+
+<p>More generally, measure the performance in a repeatable way. Use tests or tools or process, whatever you like, just make sure it can be repeated.</p>
+
+<p>I.e., trade the 15 minutes (400 hours) you would have spent optimizing the above code for testing time. Set up a test process, research tools, fiddle around with rspec/cucumber/selenium, stand up from your cubicle and yell TEST to everyone within hearing distance.</p>
+
+<p>Bottom line: Test, don&#8217;t optimize. This is a general theme of this series.</p>
+
+<p>But how is this relevant here?</p>
+
+<p>If you&#8217;re reading this magazine chances are you&#8217;re well versed in the various &#8220;Premature Optimization discussions&#8221; triggured decades Dr Dobbs Readers know this already. Premature Optimization has long been eschewed by engineering best practices. And testing is, after a long arduous journey, finally becoming mainstream.</p>
+
+<p>But pre-omptimization is almost always thought of as tweaking code to make it faster. There are other aspedts of premature optimization that aren&#8217;t so obvious, or cut and dry.</p>
+
+<p>Scenerio</p>
+
+<p>You have the software idea of a lifetime, and you just <em>know</em> this one&#8217;s going to go viral and earn you that yaught/helicoptor combo you&#8217;ve been yearning for.</p>
+
+<p>You determine that a message bus and integration framework is a good solution to the problem, and should scale. You want to use a message queu for similar reasons, for framework reasons you thing AMQ is the way to go.</p>
+
+<p>So far so good.</p>
+
+<p>So you spend a few days evaluating various message broker products: ActiveMQ, RabbitMQ, ZeroMQ, Sparrow, Starling, Kestrel, Amazon SQS, Beanstalkd, Kafka. You know you want</p>
+
+<p>But:</p>
+
+<p>Instead</p>
+<hr />
+<p>Demo / or Blog:</p>
+
+<p>Instantly build ActiveMQ app with node/ror/play + RabbitMQ and mongo: then BLAST it with jMeter.</p>
+
+<p>Bonus: gmaps and kaazing</p>
+
+<p>Then scale it!</p>
+<hr />
+<p>viral. &#8216;re building the next facebook, and you know it needs to scale.</p>
+
+<p>the beginning of you spend weeks evaluating</p>
+
+<p>RabbitMQ ActiveMQ Tibco</p>
+
+<p>This is one of the hardest engineering problems known:</p>
+
+<p>Readers of this magazine know this already. But even so, it&#8217;</p>
+<hr />
+<p>Outline:</p>
+
+<ol>
+<li>Antipattern 1: Optimize Early</li>
+</ol>
+<hr />
+<ol>
+<li>Antipattern 2: Secure Later</li>
+
+<li>Antipattern 3: Launch a Drive-By Process Change 4. 3. 4. 5.</li>
+</ol>
+
+    <hr>
+    <hr>
+    
+  </div>
+
+      </div>
+
+
+      <footer>
+        <p>&copy; John Wetherill 2012 </p>
+<!--          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+          and <a href="https://github.com/isagalaev/highlight.js" target="_blank">Highlight.js</a>
+        </p>-->
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+
+

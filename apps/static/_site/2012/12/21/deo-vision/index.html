@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>BCFerryCoder Blogs</title>
+    <meta name="description" content="">
+    <meta name="author" content="Name Lastname">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script
+src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link
+href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css"
+rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1"
+rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72"
+href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114"
+href="images/apple-touch-icon-114x114.png">
+  -->
+<link rel="stylesheet" href="styles/default.css">
+<link rel="stylesheet"
+      href="/assets/highlight.js-master/src/styles/zenburn.css">
+
+<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+  <style>
+
+     a:link.plainlink {color:black;}
+     a:visited.plainlink {color:black;}
+     a:hover.plainlink {color:#007040;}
+     a:active {color:#00ffff;}
+
+     .imagebutton {
+       pad-top: 100px;
+       margin-left: 18px;
+     }
+
+    .differentiator {
+      font-size: 15px;
+    }
+
+  </style>
+
+  </head>
+
+  <body>
+
+    <div style="margin-top:30px;" class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">BCFerryCoder</a>
+          <ul class="nav">
+      <li><a href="/topics/stackato/">Stackato/PaaS</a></li>
+      <li><a href="/topics/java/">Java</a></li>
+      <li><a href="/topics/tools/">Tools</a></li>
+      <li><a href="/topics/enterprise/">Enterprise Software</a></li>
+      <li><a href="/topics/untools/">Untools</a></li>
+      <li><a href="/topics/blog/">Blog</a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+<!--<li style="line-height:5px;"><img style="position:absolute;top:20px;padding-top:5px;margin-bottom:0px;padding-bottom:0px;" src="/assets/images/dingy.png" width="115"></li>-->
+<li style="line-height:5px;"><img style="position:absolute;top:4px;padding-top:5px;margin-bottom:0px;padding-bottom:0px;" src="/assets/images/bcferrycoder_nobg.png" width="185"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+<div class="container">
+  <div class="content">
+    <div style="width:104%;margin-left:-19px;margin-top:-21px;" class="box" style="background-color:black;color:white;">
+      <img width="110%" src="/assets/images/thinocean.png">
+    </div>
+
+
+    <div class="container">
+
+      <div class="content">
+        <div class="page-header">
+
+  <h1>The Big Demo: Enterprise-Hardy Stackato POC<br> <small>On the Road with PaaS</small></h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+
+    <p>2013 is The Year of the PaaS. Everyone at ActiveState knows this, but the industry at large is mostly in ignorance of the PaaS wave that&#8217;s on its way.</p>
+
+<p>The opportunity is mind-boggling, but the challenges are equally huge. We need to get the message out to a largely-uneducated market now so we then ride this wave, front and center all the way to prosperous shores.</p>
+
+<p>This challenges are enormous given the complexity of the product, the sheer breadth of its scope, and the immaturity of the market.</p>
+
+<p>A technical demo / POC can be highly effective and appealing if it showcases the (astonishingly large) intersection of common enterprise software requirements and major Stackato features.</p>
+
+<h3 id='current_stackato_demo_impact'>Current Stackato Demo Impact</h3>
+
+<p>Our current demo portfolio and app store inventory are compelling but are mostly directed at either programmers or IT.</p>
+
+<p>As such we are missing the mark on several crucial areas of focus for enterprise software organizations and their decision makers. Like IT, these folks are keenly interested in high availability, scalability, security, and disaster recovery, but they&#8217;re more focused on the application and software development lifecycle perspective. These are areas that we barely touch on, except in reference to IaaS.</p>
+
+<p>A strong demo suite that hits these areas hard, from a software development/engineering perspective, would fill this gap.</p>
+
+<p>In short, <strong>we need an enterprise demo with teeth</strong>, one that&#8217;s aimed directly at corporate CTOs, CIOs, and Engineering VPs, but that also resonates strongly with architects and senior engineers.</p>
+<img src='/assets/images/circlesaw.jpg' style='margin:40px;' width='100p' />
+<h4 id='the_teeth'>The Teeth</h4>
+
+<p>Scaling is a hotspot. A scaling-centric POC, based on a minimalistic app with real-world requirements, will illustrate:</p>
+
+<ul>
+<li>
+<p>a coherent, planned, measurable, achievable scaling strategy</p>
+</li>
+
+<li>
+<p>auto-scaling: what it means, on what configurations is it supported, how is it realized, what are its limitations</p>
+</li>
+
+<li>
+<p>Stackato&#8217;s features and design that enable app scaling</p>
+</li>
+
+<li>
+<p>leveraging logging to scale</p>
+</li>
+
+<li>
+<p>bundled performance measurement and instrumentation</p>
+</li>
+
+<li>
+<p>bundled Scaling Best Practices</p>
+</li>
+</ul>
+
+<p>Takehome: With Stackato, scaling an application takes on an entirely new meaning, and brings within easy reach visibility into performance characteristics and bottlenecks, and with optimization tools and practices to minimize costs.</p>
+
+<h4 id='more_teeth'>More Teeth</h4>
+
+<p>In addition to focusing on scaling the demo will highlight these enterprise software features/requirements:</p>
+
+<ul>
+<li>polyglot (multiple programming languages, frameworks, libraries, toolsets)</li>
+
+<li>message bus centric</li>
+
+<li>db heavy: both nosql and sql</li>
+
+<li>massive data requirements</li>
+
+<li>centralized logging</li>
+
+<li>integration complexity, Enterprise Integration Patterns</li>
+
+<li>performance techniques / tools / apis</li>
+
+<li>multiple interacting layers and components</li>
+
+<li>external api (often http-based) to expose entities and behavior CHECK</li>
+
+<li>integrated and comprehensive auditing facilities</li>
+
+<li>high developer productivity</li>
+
+<li>realtime health and performance monitoring</li>
+</ul>
+
+<h4 id='technology_stack'>Technology Stack</h4>
+
+<p>This POC is be based on a minimalistic application with real-world requirements and technologies including:</p>
+
+<ul>
+<li>Java</li>
+
+<li>Spring</li>
+
+<li>Ruby on Rails and/or Sinatra</li>
+
+<li>Camel and Enterprise Integration Patterns</li>
+
+<li>html5/javascript/css</li>
+
+<li>ActiveMQ Message Bus</li>
+
+<li>MongoDB</li>
+
+<li>MySQL</li>
+
+<li>Loggly</li>
+</ul>
+
+<h4 id='cost'>Cost</h4>
+
+<p>Development:</p>
+
+<p>Deployment:</p>
+
+<h4 id='deliverables'>Deliverables</h4>
+
+<ul>
+<li>demo application on github and possibly App Store</li>
+
+<li>full slide deck</li>
+
+<li>multiple blogs (minimum 3)</li>
+
+<li>multiple screencasts (minimum 3)</li>
+</ul>
+
+<h4 id='future_enhancements'>Future Enhancements</h4>
+
+<p>In short order the POC must be extended to also cover these areas:</p>
+
+<ul>
+<li>
+<p>High-Availability and Service Agreements</p>
+</li>
+
+<li>
+<p>Security (identity management, vulnerability assessment, intrusion detection and monitoring, data encryption (both in flight and at rest), DOS attacks and prevention,</p>
+</li>
+
+<li>
+<p>Disaster Recovery</p>
+</li>
+
+<li>
+<p>Mobility</p>
+</li>
+
+<li>
+<p>Analytics</p>
+</li>
+
+<li>
+<p>strong auditable security with countermeasures across all relevant layers</p>
+</li>
+
+<li>
+<p>realtime intrusion monitoring and detection</p>
+</li>
+
+<li>
+<p>strict auth requirements, elaborate roles, acls, sso</p>
+</li>
+
+<li>
+<p>service levels, responsiveness and strict performance and reliability criteria</p>
+</li>
+
+<li>
+<p>highly available and resilient to major outages</p>
+</li>
+
+<li>
+<p>multiple ports and communications channels</p>
+</li>
+
+<li>
+<p>notifications and email delivery to user and system</p>
+</li>
+
+<li>
+<p>extensive services interaction</p>
+</li>
+
+<li>
+<p>batch and offline operation</p>
+</li>
+
+<li>
+<p>extensive test capability</p>
+</li>
+
+<li>
+<p>multiple international languages and locales</p>
+</li>
+
+<li>
+<p>multitenancy</p>
+</li>
+
+<li>
+<p>mobile support</p>
+</li>
+
+<li>
+<p>rich web-based UI</p>
+</li>
+</ul>
+
+<h2 id='presentation'>Presentation</h2>
+
+<ul>
+<li>Background</li>
+
+<li>App Requirements</li>
+
+<li>Technology Stack: Camel Pipes</li>
+
+<li>Stackato</li>
+
+<li>Scaling</li>
+
+<li>Other features</li>
+</ul>
+
+<p>Then dive into one of several specific areas including;</p>
+
+<h4 id='scaling_with_stackato'>Scaling with Stackato:</h4>
+
+<p>Following directly from &#8220;Mature Optimization&#8221; from the &#8220;Combatting Antipatterns&#8221; series, this 45 minute presentation/demo builds up a minimal but comprehensive app with real-world requirements, then uses Stackato first hand to profile, identify bottlenecks, and guide design decisions for the application as it&#8217;s scaled to great heights.</p>
+
+<p>Scaling early in the dev lifecycle ensures it will scale.</p>
+
+<p>This rule</p>
+
+<p>incredibly easy it is to scale an application</p>
+
+<p>I&#8217;ve identified a score of traits/characteristics/requirements that are common to many enterprise software endeavors.</p>
+
+<p>Private PaaS in general and Stackato specifically nails an astonishing number of these traits. So many that it would be folly to initiate any major software endeavor without it.</p>
+
+<p>Of course we all know this: our challenge is conveying this message to corporate software stakeholders.</p>
+
+<p>My proposed answer: an enterprise-hardy comprehensive demo aimed</p>
+
+<p>and this is where a dazzling and comprehensive demo has the potential to significantly boost adoption.</p>
+
+<h4 id='the_big_demo_high_level_view'>The Big Demo: High Level View</h4>
+
+<p>PaaS Wave Lightning cast: Tidal wave, changes everything, anvils and lightbulbs, Platform</p>
+
+<p>Enterprise Software: quick blast through a handful of traits, skimming fast over the remaining 15</p>
+
+<p>Then introduce real world application, with real world requirements (including many from enterprise list).</p>
+
+<p>Then whip out Stackato, and use it to:</p>
+
+<ol>
+<li>directly address many/most of the traits to great advantage</li>
+
+<li>foster engineering best procatices</li>
+
+<li>combat software antipatterns</li>
+</ol>
+
+<h4 id='scale_early_thus_scale'>Scale Early, thus Scale</h4>
+
+<p>Scaling is arguably the hottest topic in the PaaS world these days. A demo that hits this early will open lots of eyes and ears, and I predict wallets too.</p>
+
+<h3 id='scaling_with_stackato'>Scaling with Stackato</h3>
+
+<p>With Stackato (and an entire cloud) at your beck and call, issues of scale can be immediately brought to the forefront (as should be the case) instead of</p>
+
+<p>Stackto enables a powerful development model where applications scale full boar before any code has been written.</p>
+
+<p>Applications that need to scale (most?)</p>
+
+<p>greatly benefit often fail to do so due to their approach.</p>
+
+<p>Following proven scaling practices</p>
+
+<p>While at the same time building a highly scalable and reliable application that actually does something.</p>
+
+<h3 id='technicalities'>Technicalities</h3>
+
+<p>Stack: 15 x 2GB VMs, 2GB each</p>
+
+<p>A stubbed application skeleton will trivially implement much of functionality of application.</p>
+
+<p>A large cluster will be</p>
+
+<p>A great starting point is scalability which is one of our most compelling stories and one that generates huge interest at the shows I attend. It also happens to dovetail perfectly with my first &#8220;antipatterns&#8221; installment.</p>
+
+<p>When I first came across Stackato in July I almost fell out of my chair as its implications hit me. Since that moment I&#8217;ve been consumed with its potential and I&#8217;ll not rest until I can shed some of these ideas and concepts that are continually tormenting me.</p>
+
+<p>This is mostly centered around Stackato and how it aligns with enterprise software.</p>
+
+<p>Background:</p>
+
+<p>Most Enterprise Software efforts have or require many of these characteristics:</p>
+
+<ul>
+<li>multiple interacting layers and components</li>
+
+<li>multiple languages, frameworks, libraries, and toolsets</li>
+
+<li>clearly defined and measurable scaling strategy</li>
+
+<li>strong auditable security with countermeasures across all relevant layers</li>
+
+<li>strict auth requirements, elaborate roles, acls, sso</li>
+
+<li>centralized logging</li>
+
+<li>massive data requirements (tmi)</li>
+
+<li>message-based</li>
+
+<li>database centric</li>
+
+<li>realtime health, performance, and intrusion monitoring</li>
+
+<li>integration complexity (EIP)</li>
+
+<li>service levels, responsiveness and strict performance and reliability criteria</li>
+
+<li>highly available and resilient to major outages</li>
+
+<li>external api (often http-based) to expose entities and behavior</li>
+
+<li>multiple ports and communications channels</li>
+
+<li>notifications and email delivery to user and system</li>
+
+<li>extensive services interaction</li>
+
+<li>batch and offline operation</li>
+
+<li>extensive test capability</li>
+
+<li>multiple international language and locales</li>
+
+<li>multitenancy</li>
+
+<li>integrated and comprehensive auditing facilities</li>
+
+<li>mobile aspect</li>
+
+<li>portable (what&#8217;s this mean?)</li>
+
+<li>comprehensable and maintainable codebase and technology stack</li>
+
+<li>productive for developers</li>
+
+<li>rich web-based UI</li>
+</ul>
+
+<p>In addition to the above, which are development and deployment centric, an entire overlying process must be in place with practices and methodologies the drive the entire development process:</p>
+
+<ul>
+<li>development methadology (like scrum)</li>
+
+<li>QA</li>
+
+<li>test procedures and strategies</li>
+
+<li>deployment/release</li>
+
+<li>continuous Integration / continuous Delivery</li>
+
+<li>configuration management, source code management</li>
+
+<li>Monitoring</li>
+
+<li>logging</li>
+
+<li>hiring / onboarding</li>
+
+<li>docs</li>
+
+<li>collaboration</li>
+
+<li>replication / backups &#8230;</li>
+</ul>
+
+<p>This is a huge list (and not comprehensive).</p>
+
+<p>shazzzam!!!! (lightning strike)</p>
+
+<p>Most every bullet point above can be GREATLY facilitated by Stackato. The cost savings for teams and organizations, small and large, can be IMMEASURABLE. (These costs can, however, be lower-bound estimated)</p>
+
+<p>App Store Needs some Teeth</p>
+
+<p>Our current demo set (&#8220;hello-<em>&#8221;, &#8220;currency converter&#8221;) is compelling but our app store inventory (with exceptions) doesn&#8217;t emphasize the enterprise hardiness and sheer value of what Stackato brings to the table.</em></p>
+
+<p>We need a demo / deck / webcast that clearly showcases Stackato&#8217;s contributions to many of the points above.</p>
+
+<p>A great starting point is scalability which is one of our most compelling stories and one that generates huge interest at the shows I attend. It also happens to dovetail perfectly with my first &#8220;antipatterns&#8221; installment.</p>
+
+<h3 id='scaling_with_stackato'>Scaling with Stackato</h3>
+
+<p>This 45 minute talk/demo will dive into using Stackato to build highly scalable apps.</p>
+
+<p>An enterprise application suite (simplified but real) will be built up, with requirements from the above list of traits: polyglot, database-centric, message-based, auditable, centralized logging, more.</p>
+
+<p>These apps will be deployed to a (previously configured) cluster, at which time I&#8217;ll illustrate some amazingly simple techniques, enabled uniquely by the Stackato ecosystem, that can be used to easily pinpoint bottlenecks.</p>
+
+<p>Once identified, the cluster will be tuned to minimize the bottlenecks.</p>
+
+<p>Scaling Summary</p>
+
+<p>Using simple techniques that are unique to a PaaS environment, Stackato gives early visibility of an application&#8217;s scaling characteristics, pinpointing bottlenecks, and immediately scaling out to accomodate if necessary.</p>
+
+<p>Now the rest of the demo</p>
+
+<p>Pick each point from the above list:</p>
+
+<ul>
+<li>multiple interacting layers and components</li>
+
+<li>multiple languages, frameworks, libraries, and toolsets</li>
+
+<li>clearly defined and measurable scaling strategy</li>
+
+<li>etc. etc. etc. etc.</li>
+</ul>
+
+<p>And show how Stackato greatly facilitates and aides the requirements/feature/characteristic</p>
+
+<p>Agenda:</p>
+
+<p>Show previously configured Stackto cluster Define requirements Rapid and brief framework introduction (cool and easy to grok) Show app code Run app Show logging</p>
+
+<p>agenda</p>
+
+    <hr>
+    <hr>
+    
+  </div>
+
+      </div>
+
+
+      <footer>
+        <p>&copy; John Wetherill 2012 </p>
+<!--          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+          and <a href="https://github.com/isagalaev/highlight.js" target="_blank">Highlight.js</a>
+        </p>-->
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+
+

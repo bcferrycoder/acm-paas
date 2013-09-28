@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>BCFerryCoder Blogs</title>
+    <meta name="description" content="">
+    <meta name="author" content="Name Lastname">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script
+src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link
+href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css"
+rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1"
+rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72"
+href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114"
+href="images/apple-touch-icon-114x114.png">
+  -->
+<link rel="stylesheet" href="styles/default.css">
+<link rel="stylesheet"
+      href="/assets/highlight.js-master/src/styles/zenburn.css">
+
+<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+  <style>
+
+     a:link.plainlink {color:black;}
+     a:visited.plainlink {color:black;}
+     a:hover.plainlink {color:#007040;}
+     a:active {color:#00ffff;}
+
+     .imagebutton {
+       pad-top: 100px;
+       margin-left: 18px;
+     }
+
+    .differentiator {
+      font-size: 15px;
+    }
+
+  </style>
+
+  </head>
+
+  <body>
+
+    <div style="margin-top:30px;" class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">BCFerryCoder</a>
+          <ul class="nav">
+      <li><a href="/topics/stackato/">Stackato/PaaS</a></li>
+      <li><a href="/topics/java/">Java</a></li>
+      <li><a href="/topics/tools/">Tools</a></li>
+      <li><a href="/topics/enterprise/">Enterprise Software</a></li>
+      <li><a href="/topics/untools/">Untools</a></li>
+      <li><a href="/topics/blog/">Blog</a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+<!--<li style="line-height:5px;"><img style="position:absolute;top:20px;padding-top:5px;margin-bottom:0px;padding-bottom:0px;" src="/assets/images/dingy.png" width="115"></li>-->
+<li style="line-height:5px;"><img style="position:absolute;top:4px;padding-top:5px;margin-bottom:0px;padding-bottom:0px;" src="/assets/images/bcferrycoder_nobg.png" width="185"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+<div class="container">
+  <div class="content">
+    <div style="width:104%;margin-left:-19px;margin-top:-21px;" class="box" style="background-color:black;color:white;">
+      <img width="110%" src="/assets/images/thinocean.png">
+    </div>
+
+
+    <div class="container">
+
+      <div class="content">
+        <div class="page-header">
+
+  <h1>Convergence as a Service <small>On the Road with PaaS</small></h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+
+    <h2 id='convergence_as_a_service'>Convergence as a Service</h2>
+
+<p>This is getting out of hand. Last decade SaaS made its debut, followed by IaaS and then PaaS. Now, in the Era of the Cloud we&#8217;re suddenly flooded by a spate of these four - and now five - letter acronyms all ending with &#8220;aaS&#8221; and all meaning mostly the same thing: <em>Something</em> as a Service, like Software, Logging, Data, Communication, Email, Compliance, Mashups, HR, Desktop, Crimeware, Security, Compliance, Integration, Malware, Lawyer, Testing.</p>
+
+<p>HRaaS is by far the most ironic, and my personal favorite. And yes, Crimeware is a service: see sidebar. Luckily we also have Lawyer-aaS as to prosecute it.</p>
+<img src='http://www.mallardsbaseball.com/images/stories/site_images/news/wet_duck.gif' width='220' /><br /><br /><br /><br />
+<p>These repeating and mostly redundant acronyms are in blatent violation of the <a href='http://c2.com/cgi/wiki?DontRepeatYourself'>DRY</a> principle. Also the increasing overloading of the first letter seems to further expose the impotence of the remaining three.</p>
+
+<h3 id='baaas'>BAaaS!</h3>
+
+<p>Banish Acronyms as a Service, I say.</p>
+
+<p>Luckily the end of this GaaS (Glut of Acronyms as a Service) attack is in sight. Most of these service types are converging.</p>
+
+<p>And PaaS, specifically <strong>Private PaaS</strong>, is the natural convergence point, as we&#8217;ll see here, starting with IaaS.</p>
+
+<h3 id='infrastructure'>Infrastructure</h3>
+
+<p>By definition PaaS needs infrastructure, whether a laptop or across multi-acre data centers spanning the globe.</p>
+
+<p>Public IaaS providers abound but they all drive a hard bargain: We give you elastic, self-service, on-demand infrascture &#8211; You hand over your data.</p>
+
+<p>Many corporations are reluctant &#8211; or prevented (by regulations, liability, customer requirements) from putting their data in the cloud.</p>
+
+<h4 id='private_paas_meet_private_iaas'>Private PaaS meet Private IaaS</h4>
+
+<p>With an integrated PaaS / Private IaaS, all the benefits of the cloud are bundled, safely behind your firewall.</p>
+
+<p>Bundling a Private PaaS product like Stackato with a Private IaaS appliance is a piece of cake: all the hard work was already done in the PaaS and IaaS themselves.</p>
+
+<h3 id='and_now_private_saas'>And now, Private SaaS</h3>
+
+<p>The combination of PaaS/IaaS behind the firewall enables Private SaaS: while public SaaS is restricted to companies not squeamish about putting their data in the cloud, Private PaaS works for all SaaS offerings, private or public.</p>
+
+<p>Take bug tracking software. It&#8217;s a perfect candidate for cloud computing and certainly <a href='http://www.jetbrains.com/youtrack/index.jsp'>SaaS bug trackers</a> (sigh&#8230;BTaaS) are sprouting up. But many organizations are not immediately inclined to put their bug data (i.e., their core ip) out in the cloud.</p>
+
+<p>With Private PaaS, bug tracker and any required infrastructure is available on the corporate LAN, integrated with SSO (also provided by PaaS) and likewise integrated with scm, agile suite, email, etc.</p>
+
+<p>All safely behind the firewall.</p>
+
+<h3 id='backups'>Backups</h3>
+
+<p>Cloud-based backups and IaaS go hand in hand. But moving Backups as a Service up to the PaaS layer enables automated, zero-config, disaster-proof backups that can be instantly integrated with an entire application and service suite.</p>
+
+<h3 id='logging'>Logging</h3>
+
+<p>Most PaaS offerings already provide extensive centralized logging systems and integrated world-class logging products such as Splunk, graylog2, logyard, and loggly.</p>
+
+<p>In addition to services and products, logging best practices, antipattern avoidance techniques, and sample code instantly available from AppStore.</p>
+
+<p>PaaS is a natural delivery vehicle for a fully-fleshed-out, enterprise-ready logging system with its underlying no-config elastic services and apps (databases, message bus, analytics), distributed log integration, and bundled coding practices.</p>
+
+<h3 id='everything_as_a_service'>Everything as a Service</h3>
+
+<p>I could go on (and I will&#8230;trust me) with multiple examples describing how DBaaS has already converged with Private PaaS (Stackato provides MySQL, Postgres, MongoDB, Redis, out of the box, no config), or how a comprehensive <strong>Email as a Service</strong> package can easily be bundled and instantly available behind the corporate firewall, already integrated with the corporate software ecosystem (bug tracking, internal blogs, SSO, etc). The only one I can&#8217;t seem to make fit is Crimeware. I&#8217;ll leave that as an exercise for the reader.</p>
+
+<h3 id='how_does_this_help_the_acronym_invasion'>How does this Help the Acronym Invasion?</h3>
+
+<p>Earlier I said we get a reprieve from these aaScronyms. Here&#8217;s how.</p>
+
+<p>With Stackato and its polyglot support, customizable appstore, no-config services, elastic scaling, and most importantly its ability to deploy on premise, the &#8220;as a Service&#8221; model doesn&#8217;t quite fit anymore. Now, instead of Software as a Service, it&#8217;s just &#8230; Software.</p>
+
+<p>Sure, it runs in the cloud, but it also runs behind the firewall, or on a laptop. The licensing model may define it as a &#8220;service&#8221; product, but it might now. Fundamentally, it&#8217;s Software.</p>
+
+<p><strong>Software Engineering Organization in a Box</strong></p>
+
+<p>To summarize, any <a href='http://activestate.com/stackato'>capable Private PaaS product</a> is capable of delivering a fully-stocked Foundation for an enterprise software organization including infrastructure, scaling, security, and a plethora of cloud-based software tools including bug trackers, project management and agile tools, wiki and blog products, the list goes on and on.</p>
+
+<p>All this, all at the click of a button. Everthing integrated. All behind your firewall.</p>
+
+<p>Own your data. Forever.</p>
+
+<p>With <a href='http://activestate.com/stackato'>Stackato Private PaaS</a></p>
+<pre> SIDEBAR: Crimeware? As a service?  Yes: It recently came to
+light that <a href='http://www.computerworld.com/s/article/9233831/Malware_uses_Google_Docs_as_proxy_to_command_and_control_server?taxonomyId=86'> Google Drive is being used to host malware</a>. This is a textbook
+example of <b>Crimeware as a Service</b>: malicious software stored in
+the cloud, and accessed with effectively infinite bandwidth (and
+securely, over SSL no less) , by infected hosts on demand, making it
+even more of a challenge to detect by network-layer security products.
+
+
+</pre><br /><br />
+
+    <hr>
+    <hr>
+    
+  </div>
+
+      </div>
+
+
+      <footer>
+        <p>&copy; John Wetherill 2012 </p>
+<!--          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+          and <a href="https://github.com/isagalaev/highlight.js" target="_blank">Highlight.js</a>
+        </p>-->
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+
+

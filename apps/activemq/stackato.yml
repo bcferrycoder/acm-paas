@@ -1,0 +1,16 @@
+name: activemq
+#url: activemq.jdw.com
+framework:
+  type: sinatra
+  runtime: ruby19
+mem: 512M
+services:
+   ${name}-message-service: harbor 
+   ${name}-stomp-service: harbor 
+hooks:
+  pre-running:
+    - wget "http://mirror.nexcess.net/apache/activemq/apache-activemq/5.8.0/apache-activemq-5.8.0-bin.tar.gz"
+    - tar xzf apache-activemq-5.8.0-bin.tar.gz
+    - ruby -p -i -e '$_.gsub!(%r#61616#,''"'$STACKATO_HARBOR_ACTIVEMQ_MESSAGE_SERVICE'")' activemq-openwire-stomp.xml
+    - ruby -p -i -e '$_.gsub!(%r#61613#,''"'$STACKATO_HARBOR_ACTIVEMQ_STOMP_SERVICE'")' activemq-openwire-stomp.xml
+    - cp activemq-openwire-stomp.xml apache-activemq-5.8.0/conf

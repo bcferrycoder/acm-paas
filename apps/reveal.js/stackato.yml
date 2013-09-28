@@ -1,0 +1,15 @@
+name: reveal
+framework:
+  type: generic
+#  type: standalone
+  runtime: node010
+mem: 256M
+hooks:
+  post-staging: ./update-node.sh
+#    - cd /app/app; npm install
+#    - cd /app/app; npm install grunt-cli --save-dev
+#    - (cd /app/app; npm install grunt --save-dev
+#command: while true; do echo sleep; sleep 1; done
+#command: /app/app/node_modules/grunt-cli/bin/grunt serve
+processes:
+  web: /app/app/node_modules/grunt-cli/bin/grunt serve --port $PORT

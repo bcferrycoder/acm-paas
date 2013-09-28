@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>BCFerryCoder Blogs</title>
+    <meta name="description" content="">
+    <meta name="author" content="Name Lastname">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script
+src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link
+href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css"
+rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1"
+rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72"
+href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114"
+href="images/apple-touch-icon-114x114.png">
+  -->
+<link rel="stylesheet" href="styles/default.css">
+<link rel="stylesheet"
+      href="/assets/highlight.js-master/src/styles/zenburn.css">
+
+<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+  <style>
+
+     a:link.plainlink {color:black;}
+     a:visited.plainlink {color:black;}
+     a:hover.plainlink {color:#007040;}
+     a:active {color:#00ffff;}
+
+     .imagebutton {
+       pad-top: 100px;
+       margin-left: 18px;
+     }
+
+    .differentiator {
+      font-size: 15px;
+    }
+
+  </style>
+
+  </head>
+
+  <body>
+
+    <div style="margin-top:30px;" class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">BCFerryCoder</a>
+          <ul class="nav">
+      <li><a href="/topics/stackato/">Stackato/PaaS</a></li>
+      <li><a href="/topics/java/">Java</a></li>
+      <li><a href="/topics/tools/">Tools</a></li>
+      <li><a href="/topics/enterprise/">Enterprise Software</a></li>
+      <li><a href="/topics/untools/">Untools</a></li>
+      <li><a href="/topics/blog/">Blog</a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+<!--<li style="line-height:5px;"><img style="position:absolute;top:20px;padding-top:5px;margin-bottom:0px;padding-bottom:0px;" src="/assets/images/dingy.png" width="115"></li>-->
+<li style="line-height:5px;"><img style="position:absolute;top:4px;padding-top:5px;margin-bottom:0px;padding-bottom:0px;" src="/assets/images/bcferrycoder_nobg.png" width="185"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+<div class="container">
+  <div class="content">
+    <div style="width:104%;margin-left:-19px;margin-top:-21px;" class="box" style="background-color:black;color:white;">
+      <img width="110%" src="/assets/images/thinocean.png">
+    </div>
+
+
+    <div class="container">
+
+      <div class="content">
+        <div class="page-header">
+
+  <h1>Combating Software Antipatterns with Platform as a Service <small>On the Road with PaaS</small></h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+
+    <br /><br /><br /><br /><br />
+<p>Combating Antipatterns with Platform as a Service</p>
+
+<p>This is the first installment of a series on antipatterns that are found in software organizations today.</p>
+
+<h3 id='antipattern_1_optimize_early'>Antipattern #1: Optimize Early</h3>
+
+<p>Premature optimization, or the practice of dedicating early resources to the improvement of application performance, often results in overengineering, an undesirable practice that can impact overall success.</p>
+
+<p>Here we examine this well-known antipattern and show some of its not-so-obvious, more incidious causes. We&#8217;ll then show how Platform as a Service helps reduce pre-optimization and also how its powerful scaling mechanisms allow concentrated focus on scaling from day one.</p>
+
+<h4 id='overengineering'>Overengineering</h4>
+
+<p>Overenginering means building something to be more robust, or faster, or complex than it needs to be. It&#8217;s usally recognized as an antipattern to be avoided. But not always.</p>
+
+<p>Here&#8217;s a good example: Visitors to the Grand Canyon in Arizona can step onto a platform with transparent floors that&#8217;s poised over the famous abyss. This platform, called the &#8220;Skywalk,&#8221; is designed to hold 120 people who come to gaze through the glass floor, and through 4000 feet of Arizona air, at the Colorado river below.</p>
+<img src='http://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Grand-canyon-west-skywalk.jpg/450px-Grand-canyon-west-skywalk.jpg' width='240' />
+<h4 id='how_strong_is_it'>How strong is it?</h4>
+
+<p>Obviously the Skywalk needs to be strong enough to hold 120 people, and it most certainly is: its foundation is structurally rated to support .. get this &#8230; 71 million pounds. (!)</p>
+
+<p>That seems a bit&#8230;extreme. For example, to exceed its rated weight without overcrowding (i.e., with no more than 120 pairs of shoes on the glass), each of those 120 folks on the bottom layer would need to carry <strong>four hundred thousand people</strong> on their shoulders.</p>
+
+<p>I think it&#8217;s safe to say that the foundation of the Skywalk is over-engineered.</p>
+
+<p>Which isn&#8217;t always a bad thing. You&#8217;d probably agree that overengineering the Skywalk is preferable to underengineering it. I&#8217;d also bet that the extra cost probably wasn&#8217;t exhorbitantly high. The extra hype alone (supports the weight of 80 fully loaded Boeing 747&#8217;s!! ), probably makes it worth it.</p>
+
+<p><strong>But overengineering is a problem if it incurs cost.</strong> And it frequently does. Building something that&#8217;s not needed is a waste of time, and requires extra resources (hardware, programmers, docs, infrastructure, way more) And it can be harmful when it results, as it often does, in increased complexity.</p>
+
+<p>So it&#8217;s worth identifying factors that encourage overengineering. The practice of &#8220;Premature Optimization,&#8221; where optimization effort is expended early in an application&#8217;s lifecycle, is one such factor: an engineering practice that often seduces programmers into overengineering.</p>
+<hr />
+<h3 id='premature_optimization'>Premature Optimization</h3>
+
+<p>Premature Optimization is likely the most famous software antipattern and has been discussed actively for almost 40 years since Donald Knuth&#8217;s famous &#8220;premature optimization is the root of all evil&#8221; quote. These discussion have raised some good reasons not to over-invest in code optimization at the front-end of the Software Development Lifecycle</p>
+
+<h5 id='why_is_optimizing_early_a_problem'>Why is Optimizing Early a Problem?</h5>
+
+<p>Here are a few reasons to avoid optimizing an application before its performance characteristics are understood:</p>
+
+<ul>
+<li>
+<p>Requirements tend to change during the early phases of development. Clearly there&#8217;s no point optimizing something that eventually gets eliminated due to requirement changes.</p>
+</li>
+
+<li>
+<p>Similarly, redesign and refactoring can also negate an optimization effort. This is particularly perverse if the refactoring is the result of further optimization efforts.</p>
+</li>
+
+<li>
+<p>Often the component that&#8217;s the target of optimization turns out not to be a bottleneck in the processes/dataflows in which it participates, so even after it&#8217;s optimized, the overall throughput doesn&#8217;t improve.</p>
+</li>
+
+<li>
+<p>As tempting as it is, focusing granularly on specific &#8220;underperforming&#8221; components fails to look at the big picture. It often makes more sense to &#8220;scale out,&#8221; for example by increasing the number of participating component instances, than it does to optimize the component itself.</p>
+</li>
+
+<li>
+<p>Sometimes optimized code can be more complex, and thus less maintainable, than the equivalent non-optimized code. (Note that the opposite can be true too). Complex and difficult-to-maintain code has long-term ill-effects on all aspects of a product&#8217;s success.</p>
+</li>
+</ul>
+
+<h4 id='beyond_code_tweaking'>Beyond Code Tweaking</h4>
+
+<p>Premature optimization is a relatively familiar concept at the coding level, but optimization reaches beyond algorithm enhancement and code improvements. Some common and incipient optimizations can sneak into the app lifecycle when no-one is looking.</p>
+
+<p>For example, consider a startup at the early phases of its app lifecycle. It has the killer idea, already prototyped and funded, which will undoubtably surpass twitter in popularity. But it has to move fast to beat the comptetition. Also because of its certain popularity it needs to scale, hard.</p>
+
+<p>The architects have determined that a message-based system makes the most sense, so the new engineering team needs a fast message broker to relay messages between the various app components. And because messaging technologies are constantly evolving it makes sense to dedicate an engineer to the task of evaluating the current breed of message products and recommending one that is fast.</p>
+
+<p>This performance evaluation is a natural step, and it isn&#8217;t a big hit, maybe a day or two of engineer/architect time.</p>
+<img src='/assets/images/stop.png' />
+<h3 id='antipattern_alert'>Antipattern Alert!</h3>
+
+<p>Stop right there! This is a perfect example of premature optimization. The two day hit early in the cycle is costly, and that time can be put to much better uses. We&#8217;ll cover those uses shortly, but first, let&#8217;s talk about PaaS.</p>
+
+<h2 id='platform_as_a_service'>Platform as a Service</h2>
+
+<p>Platform as a Service (PaaS) is groundbreaking technology that provides to enterprises a fully fleshed-out foundation from which to launch development efforts. The better PaaS offerings include a variety of services, configured to work out-of-the-box with no overhead required for installing, configuring, deploying. Or for that matter evaluating. In addition to app containers, sql and nosql databases, centralized logging, security infrastructure, web servers, and much more, PaaS offerings often include one or more common message brokers.</p>
+
+<p>My suggestion: skip the two-day message broker evaluation and instead use PaaS as the basis for your development efforts. Specifically, incorporate the PaaS-bundled message broker into your stack. This allows you to get the application off the ground, stabilize the data-flow and evaluate the archecture, while also thoroughly measuring and analyzing its performance characteristics.</p>
+
+<p>Later, after the data-flow, requirements, and overall architecture has gelled, you have a foundation from which to thoroughly evaluate the performance characteristics of your application.</p>
+
+<h3 id='optimization_and_scaling'>Optimization and Scaling</h3>
+
+<p>Many applications have high scaling requirements: these unfortunately can often errantly fuel the tendency to optimize. This is because optimization and scaling are frequently confused.</p>
+
+<p>But Optimization != Scaling. The two are related, but the former should be postponed as much as possible, while the latter must be a high priority from the outset.</p>
+
+<p><span>sidebar: failing &#8220;slash-dot effect&#8221; - show graph - social networking (twitter, facebook, linkedin, and news aggregators: techcrunch, hacker news, slash-dot)</span></p>
+
+<h3 id='building_for_scale'>Building for Scale</h3>
+
+<p>Building for scale doesn&#8217;t mean making your code run fast: it means designing your app and its overall ecosystem to scale and, just as important, it means gaining a deep understanding of the specific factors that affect your application&#8217;s performance. The best way to gain this understanding is through measurment and instrumentation.</p>
+
+<p>So, take those two days you saved by skipping the message broker evaluation, and pour this time into repeatable performance monitoring and measurement. This could mean looking at performance tools (yourkit, ruby-prof, dtrace, Shark, NodeTime, yslow, google Page Speed - the list is endless, and depends on the underlying technology stack). Or building repeatable performance tests that can be incorporated into your build process.</p>
+
+<p>While you&#8217;re at it have a look at the introduction to Gartner&#8217;s <a href='http://www.gartner.com/technology/reprints.do?ct=120820&amp;id=1-1BRNFO0&amp;st=sg'>Magic Quadrant for Application Performance Monitoring</a> which emphasizes the importance of profiling, measuring, and tooling to provide visibility into an application&#8217;s performance. This visibility then then be used to drive optimization efforts and quantify their outcomes.</p>
+
+<p>Bottom line: don&#8217;t dive into optimization but instead become fluent in tools, techniques, and tests to allow you to determine your apps performance characteristics.</p>
+
+<p>This is an area where PaaS really shines.</p>
+
+<h3 id='scaling_with_platform_as_a_service'>Scaling with Platform as a Service</h3>
+
+<p>Earlier I suggested using a PaaS product to provide required services including a message broker. This automated service availability is a big time-saver that can jumpstart your software development process. But PaaS does much more than provide no-configuration out-of-the-box services. Scaling is a perfect example.</p>
+
+<p>A quality PaaS platform enables scalability out of the box. Deploy a skeletal, first-cut, minimally functional version of your application at its very early stages to PaaS, and you&#8217;ve deployed it into an environment that can be instantly scaled. PaaS allows you to tune and manage resources, spawn multiple service instances (such as message brokers) and measure immediately, using the tools and tests you&#8217;ve now incorported, the effects of adding additional these resouces to the stack.</p>
+
+<p>A maxim of of Scrum is &#8220;fail early.&#8221; Incorporating PaaS into your development process allows you to <strong>scale early</strong>, and thus, scale.</p>
+
+<p>Note: A companion article walks through the process of creating a scalable web application, and highlights each of the points discussed in this series.</p>
+
+<h5 id='next_in_series_antipattern_2_bolton_security'>Next in series: Antipattern #2: Bolt-On Security</h5>
+
+<p>As we&#8217;ve seen, premature optimization, and overengineering in general, can be costly. But some practices can be downright dangerous. In the right (wrong) circumstances, a security failure can bring down a company.</p>
+
+<p>This article discusses practices to enhance security using PaaS.</p>
+
+<p>references:</p>
+
+<ul>
+<li>http://www.bluebytesoftware.com/blog/2010/09/06/ThePrematureOptimizationIsEvilMyth.aspx</li>
+
+<li>http://ubiquity.acm.org/article.cfm?id=1513451</li>
+
+<li>http://en.wikipedia.org/wiki/Program_optimization</li>
+
+<li>http://www.grandcanyongateway.com/department/category/grand_canyon_skywalk</li>
+</ul>
+
+    <hr>
+    <hr>
+    
+  </div>
+
+      </div>
+
+
+      <footer>
+        <p>&copy; John Wetherill 2012 </p>
+<!--          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+          and <a href="https://github.com/isagalaev/highlight.js" target="_blank">Highlight.js</a>
+        </p>-->
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+
+

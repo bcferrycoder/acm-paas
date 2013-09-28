@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>BCFerryCoder Blogs</title>
+    <meta name="description" content="">
+    <meta name="author" content="Name Lastname">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script
+src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link
+href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css"
+rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1"
+rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72"
+href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114"
+href="images/apple-touch-icon-114x114.png">
+  -->
+<link rel="stylesheet" href="styles/default.css">
+<link rel="stylesheet"
+      href="/assets/highlight.js-master/src/styles/zenburn.css">
+
+<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+  <style>
+
+     a:link.plainlink {color:black;}
+     a:visited.plainlink {color:black;}
+     a:hover.plainlink {color:#007040;}
+     a:active {color:#00ffff;}
+
+     .imagebutton {
+       pad-top: 100px;
+       margin-left: 18px;
+     }
+
+    .differentiator {
+      font-size: 15px;
+    }
+
+  </style>
+
+  </head>
+
+  <body>
+
+    <div style="margin-top:30px;" class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">BCFerryCoder</a>
+          <ul class="nav">
+      <li><a href="/topics/stackato/">Stackato/PaaS</a></li>
+      <li><a href="/topics/java/">Java</a></li>
+      <li><a href="/topics/tools/">Tools</a></li>
+      <li><a href="/topics/enterprise/">Enterprise Software</a></li>
+      <li><a href="/topics/untools/">Untools</a></li>
+      <li><a href="/topics/blog/">Blog</a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+<!--<li style="line-height:5px;"><img style="position:absolute;top:20px;padding-top:5px;margin-bottom:0px;padding-bottom:0px;" src="/assets/images/dingy.png" width="115"></li>-->
+<li style="line-height:5px;"><img style="position:absolute;top:4px;padding-top:5px;margin-bottom:0px;padding-bottom:0px;" src="/assets/images/bcferrycoder_nobg.png" width="185"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+<div class="container">
+  <div class="content">
+    <div style="width:104%;margin-left:-19px;margin-top:-21px;" class="box" style="background-color:black;color:white;">
+      <img width="110%" src="/assets/images/thinocean.png">
+    </div>
+
+
+    <div class="container">
+
+      <div class="content">
+        <div class="page-header">
+
+  <h1>Enterprise in a Basement <small>On the Road with PaaS</small></h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+
+    <p>Enterprise in a Basement</p>
+
+<p>When I first came across Stackato in July I almost fell out of my chair as its implications hit me. Since that moment I&#8217;ve been consumed with its potential and I&#8217;ll not rest until I can shed some of these ideas and concepts that are continually tormenting me.</p>
+
+<p>This is mostly centered around Stackato and how it aligns with enterprise software.</p>
+
+<p>And the only way I think I can get this out of my system is to build something, just to see if my perceptions are accurate.</p>
+
+<p>My vision is to a large-scale proof of concept that shows the power of Stackato at building reliable, scalable, secure enterprise software at HUGE savings.</p>
+
+<h3 id='start_in_the_basement'>Start in the Basement</h3>
+
+<p>I have a stack of Linux installation DVDs in my basement for a variety of distros. I also have a friend with four Sun Ultra 24 workstations collecting dust in his attic. He graciously lent them, and so now I have four boxes spinning (and consuming their fair share of kWh) with four different operating systems: Ubuntu, Centos, SUSE, and Fedora (as a tribute to a university in San Francisco, for no particular reason than the letters made me do it.</p>
+
+<p>This blog will cronicle the construction of one or more multi-node Stackato clusters, and the simulation of a full-fledged enterprise application, running on the clusters. Considerable focus will be on enterprise requirements such as scalability, security, performancing, reliablity, and how Platform as a Service greatly facilities these.</p>
+
+<p>Disclaimer: I work for ActiveState&#8230;</p>
+
+<p>Ingredients</p>
+
+<p>The four U24 workstations are configured thusly:</p>
+
+<p>Ubuntu: 8GB RAM, 1TB disk Centos: 8GB RAM, 1TB disk, quad core 3GZ Fedora: 4GB RAM, 750GB disk SUSE: 4GB RAM, 750GB disk</p>
+
+<p>Three Macs:</p>
+
+<p>13&#8221; MacBook Pro, single core, 4GB RAM, ???GB 15&#8221; MacBook Pro, single core, 8GB RAM, 750GB Disk 15&#8221; MacBook Retina, single core 2.3GHz, 8GB RAM</p>
+
+<p>Totals: 44 GB RAM 5TB Disk X processors</p>
+
+<p>Misc Hardware</p>
+
+<p>6 monitors iPad iPhone camera toshiba netbook smart meter</p>
+
+<p>WORTH NOTING: HOST SYSTEMS are DHCP (I was avoiding that for some reason)</p>
+
+<p>Software</p>
+
+<p>You need a VM container / hypervisor.</p>
+
+<p>I&#8217;m using VirtualBox and VMWare.</p>
+
+<p>Installing vbox on Mac and Windows is quick and painless.</p>
+
+<p>On Linux it&#8217;s a pain in the butt. It took way too long messing around with dependencies and the like trying to get VirtualBox running on SUSE and Fedora. Ubuntu was easier, and Centos worked immediately.</p>
+
+<p>In fact, I had to give up entirely on SUSE, and was about to go with another Centos instance when it occurred to me that running on Windows would make an even better story.</p>
+
+<p>So the configuration is now:</p>
+
+<p>Ubuntu: 8GB RAM, 1TB disk Centos: 8GB RAM, 1TB disk Fedora: 4GB RAM, 750GB disk Windows7: 4GB RAM, 750GB disk</p>
+
+<p>Summary to this point:</p>
+
+<ol>
+<li>Loaded Ubuntu/Centos/Fedora/Windows7 on four Ultra 24s</li>
+
+<li>Installed VirtualBox</li>
+
+<li>Downloaded latest Stackato Image, and imported into VBox</li>
+
+<li>Booted each VM, for a total of six (two each on Ubuntu and Centos).</li>
+</ol>
+
+<p>Next I prepared the cluster</p>
+
+<p>Each node in a cluster must have a static ip, and its hostname must be resolvable somehow.</p>
+
+<p>I allocated a block of IPs in the 192.168.1 subnet on my home network for each stackato node:</p>
+
+<p>ubuntu1: 61 ubuntu2: 62 centos1: 63 centos2: 64 win7: 65 fedora: 66 mac1: 80 mac2: 81 mac3: 83</p>
+
+<p>Then for each Stackato instance.</p>
+
+<ol>
+<li>
+<p>Assign the ip address from the above list with &#8220;kato op static_ip&#8221;. For convenience I am using &#8220;xip.io&#8221; as my &#8220;pseudo-dns&#8221; to associate the hostname with the ip address.</p>
+</li>
+
+<li>
+<p>Rename the instance using &#8220;kato rename 192.168.1.63.xip.io&#8221;</p>
+</li>
+</ol>
+
+<p>2b. disable mdns as directed: &#8220;kato disable mdns&#8221; 2c. reboot as directed: &#8220;sudo reboot&#8221;</p>
+
+<p>I picked centos1 as my primary/master node.</p>
+
+<p>So to prepare it:</p>
+
+<ol>
+<li>kato setup core api.192.168.1.63.xip.io</li>
+</ol>
+
+    <hr>
+    <hr>
+    
+  </div>
+
+      </div>
+
+
+      <footer>
+        <p>&copy; John Wetherill 2012 </p>
+<!--          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+          and <a href="https://github.com/isagalaev/highlight.js" target="_blank">Highlight.js</a>
+        </p>-->
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+
+
